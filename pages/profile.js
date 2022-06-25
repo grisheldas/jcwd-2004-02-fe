@@ -5,7 +5,6 @@ import { RiListUnordered, RiLockPasswordLine } from "react-icons/ri";
 import { MdPayments, MdLocationOn } from "react-icons/md";
 import { Divider, Box, Image, Icon } from "@chakra-ui/react";
 import useUser from "../hooks/useUser";
-import ProfileModalEditProfile from "../components/ProfileModalEditProfile";
 import Navbar from "../components/Navbar";
 import { API_URL } from "../helpers";
 import moment from "moment";
@@ -87,8 +86,6 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-
-                <ProfileModalEditProfile />
               </div>
             </div>
           </div>
