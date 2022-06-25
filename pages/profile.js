@@ -5,7 +5,6 @@ import { RiListUnordered, RiLockPasswordLine } from "react-icons/ri";
 import { MdPayments, MdLocationOn } from "react-icons/md";
 import { Divider, Box, Image, Icon } from "@chakra-ui/react";
 import useUser from "../hooks/useUser";
-import ProfileModalEditPhoto from "../components/ProfileModalEditPhoto";
 import ProfileModalEditProfile from "../components/ProfileModalEditProfile";
 import Navbar from "../components/Navbar";
 import { API_URL } from "../helpers";
@@ -14,7 +13,6 @@ import "moment/locale/id";
 
 const Profile = () => {
   const { name, email, gender, birthdate, profilepic } = useUser();
-  const profpic = profilepic ? `${API_URL + profilepic}` : `../no_pic.png`;
   return (
     <div>
       <Navbar />
@@ -24,7 +22,7 @@ const Profile = () => {
             <Image
               borderRadius="full"
               boxSize="75px"
-              src={profpic}
+              src={`../no_pic.png`}
               alt="profilepic"
             />
             <div className="mt-6 ml-2 items-center font-bold pr-10 truncate ...">
@@ -63,9 +61,8 @@ const Profile = () => {
               <div className="flex flex-col">
                 <img
                   className="flex items-center ml-11 mt-10 rounded-2xl h-[300px] w-[300px]"
-                  src={profpic}
+                  src={`../no_pic.png`}
                 />
-                <ProfileModalEditPhoto />
               </div>
               <div>
                 <div>
