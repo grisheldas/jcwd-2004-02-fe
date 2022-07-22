@@ -115,7 +115,7 @@ const ProfileModalEditPhoto = () => {
                 />
               ) : (
                 <img
-                  src={`${API_URL}${profilepic}`}
+                  src={profilepic ? `${API_URL}${profilepic}` : `../no_pic.png`}
                   alt=""
                   className="h-[300px] w-[300px]"
                 />

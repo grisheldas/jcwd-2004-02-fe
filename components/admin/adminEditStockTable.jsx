@@ -51,6 +51,8 @@ function AdminEditStockTable({
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
 
+  console.log(inputStockAdd, "inputstokadd");
+
   // handle change edit
   const handleChange = (e, prop) => {
     setinputStockDet({ ...inputStockDet, [prop]: e.target.value });
@@ -260,7 +262,11 @@ function AdminEditStockTable({
                             className="w-7 text-sm"
                             type="number"
                             onChange={(e) => handleChangeAdd(e, "stock")}
-                            value={inputStockAdd?.stock}
+                            value={
+                              inputStockAdd == undefined
+                                ? 0
+                                : inputStockAdd.stock
+                            }
                           />
                         </div>
 
